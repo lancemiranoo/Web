@@ -1,0 +1,374 @@
+<!--************************************************************
+|  Project Name: Interactive Web Application                   |
+|                Using jQuery Effects and JavaScript           |
+|       Authors: Joash Daligcon, 000358654                     |
+|                Lance Mirano, 000368826                       |
+|    Created on: 2024-10-19                                    |
+|   Description: A web application for Product Showcase of PC  |
+|                components, gaming gears, and custom builds.  |
+*************************************************************-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Den: PC Build Hub</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Navigation Menu -->
+  <div id="navigationMenu">
+    <button id="expandMenu">Navigation Menu</button>
+    <div class="menuContent" style="display: none;">
+      <p><a href="#home">Home</a></p>
+      <p><a href="#products">Products</a></p>
+      <p><a href="#faq">FAQ</a></p>
+    </div>
+  </div>
+   
+<!-- Home Section -->
+<div id="home" class="section">
+  <img class="bannerImage" src="./images/bannerImage.jpg" alt="Home Section Banner">
+  <h1 class="bannerHead">Digital Den: PC Build Hub</h1>
+  <p class="bannerText">Your one-stop shop for the latest PC components, gaming gear, and custom builds.</p>
+  <div class="shopDescription">
+    <p>
+      Whether you're building your first PC or upgrading your current setup, we have everything you need. 
+      Browse our curated product selection with top-rated processors, motherboards, GPUs, and more.
+    </p>
+  </div>
+</div>
+
+<!-- Product Gallery Section -->
+<div id="products" class="section">
+  <h1>Product Gallery</h1>
+  <div class="container">
+    <!-- Buttons to toggle visibility for filtering products -->
+    <div id="filterOptions">
+      <h3>Filters</h3>
+      <button class="filterBtn" data-filter="all">All Products</button>
+      <button class="filterBtn" data-filter="cpu">CPU</button>
+      <button class="filterBtn" data-filter="case">Case</button>
+      <button class="filterBtn" data-filter="motherboard">Motherboard</button>
+      <button class="filterBtn" data-filter="gpu">GPU</button>
+      <button class="filterBtn" data-filter="ram">RAM</button>
+      <button class="filterBtn" data-filter="ssd">SSD</button>
+      <button class="filterBtn" data-filter="psu">Power Supply</button>
+      <button class="filterBtn" data-filter="mouse">Mouse</button>
+      <button class="filterBtn" data-filter="monitor">Monitor</button>
+      <button class="filterBtn" data-filter="mousepad">Mousepad</button>
+      <button class="filterBtn" data-filter="headset">Headset</button>
+    </div>
+    <!-- Product Showcase -->
+    <div class="productList">
+        <div class="productItem cpu">
+          <img src="./images/ryzen-5-5600x.jpg" alt="AMD Ryzen 5 5600X">
+          <div class="productName">AMD Ryzen 5 5600X</div>
+          <div class="productPrice">$189.00</div>
+          <div class="description">
+            <p>The AMD Ryzen 5 5600X is a highly efficient 6-core processor designed for gamers and content creators alike. With a base clock of 3.7 GHz and a boost clock of up to 4.6 GHz.</p>
+          </div>
+        </div>
+        <div class="productItem motherboard">
+          <img src="./images/tufB550M.png" alt="TUF Gaming B550M-PLUS">
+          <div class="productName">TUF Gaming B550M-PLUS</div>
+          <div class="productPrice">$252.00</div>
+          <div class="description">
+            <p>The TUF Gaming B550M-PLUS motherboard is engineered for durability and performance, making it an ideal choice for gamers and PC builders.</p>
+          </div>
+        </div>
+        <div class="productItem gpu">
+          <img src="./images/gigabyteRTX-4070TiSuper.png" alt="GIGABYTE RTX 4070 Ti Super">
+          <div class="productName">GIGABYTE RTX 4070 Ti Super</div>
+          <div class="productPrice">$1140.00</div>
+          <div class="description">
+            <p>The GIGABYTE RTX 4070 Ti Super is a powerful graphics card designed for gamers and content creators seeking top-tier performance.</p>
+          </div>
+        </div>
+        <div class="productItem ram">
+          <img src="./images/vengeanceRGB.png" alt="Vengeance RGB (2x16GB) DDR5">
+          <div class="productName">Vengeance RGB (2x16GB) DDR5</div>
+          <div class="productPrice">$180.00</div>
+          <div class="description">
+            <p>The Vengeance RGB DDR5 memory kit combines cutting-edge performance with striking aesthetics.</p>
+          </div>
+        </div>
+        <div class="productItem ssd">
+          <img src="./images/samsung-990ProM.2.png" alt="990 PRO M.2 NVME SSD">
+          <div class="productName">990 PRO M.2 NVME SSD</div>
+          <div class="productPrice">$220.00</div>
+          <div class="description">
+            <p>The 990 PRO M.2 NVMe SSD offers blazing-fast storage performance for gamers and content creators alike. With exceptional read speeds of up to 7,450 MB/s and write speeds of up to 6,900 MB/s.</p>
+          </div>
+        </div>
+        <div class="productItem psu">
+          <img src="./images/rm-1000x.png" alt="RM1000x">
+          <div class="productName">RM1000x</div>
+          <div class="productPrice">$220.00</div>
+          <div class="description">
+            <p>The RM1000x is a high-performance 1000W power supply designed for enthusiasts and gamers seeking reliability and efficiency.</p>
+          </div>
+        </div>
+        <div class="productItem case">
+          <img src="./images/dlm-22DarkFlash.jpg" alt="DarkFlash DLM22">
+          <div class="productName">DarkFlash DLM22</div>
+          <div class="productPrice">$50.00</div>
+          <div class="description">
+            <p>The DarkFlash DLM22 is a stylish and functional mid-tower gaming case designed for optimal airflow and stunning aesthetics.</p>
+          </div>
+        </div>
+        <div class="productItem mouse">
+          <img src="./images/logitechSuperlight.jpg" alt="Logitech G Pro X Superlight">
+          <div class="productName">Logitech G Pro X Superlight</div>
+          <div class="productPrice">$140.00</div>
+          <div class="description">
+            <p>The Logitech G Pro X Superlight is an ultra-lightweight gaming mouse designed for professional esports players and serious gamers.</p>
+          </div>
+        </div>
+        <div class="productItem monitor">
+          <img src="./images/xl2546xBenqZowie.png" alt="BenQ Zowie XL2546X">
+          <div class="productName">BenQ Zowie XL2546X</div>
+          <div class="productPrice">$580.00</div>
+          <div class="description">
+            <p>The Zowie XL2546X is a top-tier esports gaming monitor designed for competitive gamers seeking speed and precision.</p>
+          </div>
+        </div>
+        <div class="productItem cpu">
+          <img src="./images/ryzen-7-5800x.png" alt="AMD Ryzen 7 5800X">
+          <div class="productName">AMD Ryzen 7 5800X</div>
+          <div class="productPrice">$270.00</div>
+          <div class="description">
+            <p>The AMD Ryzen 7 5800X is a high-performance 8-core, 16-thread processor that delivers exceptional gaming and multitasking capabilities.</p>
+          </div>
+        </div>
+        <div class="productItem motherboard">
+          <img src="./images/gigabyteB650M.png" alt="Gigabyte B650M">
+          <div class="productName">Gigabyte B650M</div>
+          <div class="productPrice">$260.00</div>
+          <div class="description">
+            <p>The Gigabyte B650M is a feature-rich micro-ATX motherboard designed for AMD Ryzen processors, offering a solid foundation for your next build.</p>
+          </div>
+        </div>
+        <div class="productItem gpu">
+          <img src="./images/gigabyteRTX-3080.jpg" alt="GIGABYTE RTX 3080">
+          <div class="productName">GIGABYTE RTX 3080</div>
+          <div class="productPrice">$1340.00</div>
+          <div class="description">
+            <p>The GIGABYTE RTX 3080 graphics card is a powerhouse for gamers and creators, delivering exceptional performance with NVIDIA's Ampere architecture.</p>
+          </div>
+        </div>
+        <div class="productItem ram">
+          <img src="./images/kingstonHyperxFury.png" alt="Kingston Hyperx Fury 8GB">
+          <div class="productName">Kingston Hyperx Fury 8GB</div>
+          <div class="productPrice">$60.00</div>
+          <div class="description">
+            <p>The Kingston HyperX Fury 8GB RAM module is designed for gamers and content creators seeking enhanced performance and speed.</p>
+          </div>
+        </div>
+        <div class="productItem ssd">
+          <img src="./images/kingstonM.2-1TB.jpg" alt="Kingston NV2 1TB M.2 SSD">
+          <div class="productName">Kingston NV2 1TB M.2 SSD</div>
+          <div class="productPrice">$70.00</div>
+          <div class="description">
+            <p>The Kingston NV2 1TB M.2 SSD is a fast and reliable storage solution designed for gamers and professionals alike.</p>
+          </div>
+        </div>
+        <div class="productItem psu">
+          <img src="./images/gx-850SeasonicFocus.png" alt="Seasonic Focus GX-850 850W">
+          <div class="productName">Seasonic Focus GX-850 850W</div>
+          <div class="productPrice">$160.00</div>
+          <div class="description">
+            <p>The Seasonic Focus GX-850 is a high-performance power supply unit designed for gamers and PC builders seeking reliability and efficiency.</p>
+          </div>
+        </div>        
+        <div class="productItem case">
+          <img src="./images/nzxtH5Flow.jpg" alt="NZXT H5 Flow">
+          <div class="productName">NZXT H5 Flow</div>
+          <div class="productPrice">$100.00</div>
+          <div class="description">
+            <p>The H5 Flow boosts airflow and GPU cooling with its perforated PSU shroud, mesh panels, and large radiator support—all in a compact mid-tower form factor.</p>
+          </div>
+        </div>        
+        <div class="productItem monitor">
+          <img src="./images/aw2725dfAlienware.jpg" alt="Alienware (AW2725DF)">
+          <div class="productName">Alienware (AW2725DF)</div>
+          <div class="productPrice">$1150.00</div>
+          <div class="description">
+            <p>The Dell AW2725DF is a 27-inch 1440p premium gaming monitor with a QD-OLED display.</p>
+          </div>
+        </div>        
+        <div class="productItem cpu">
+          <img src="./images/intelCoreI9-14900.jpg" alt="Intel Core i9-14900KS">
+          <div class="productName">Intel Core i9-14900KS</div>
+          <div class="productPrice">$980.00</div>
+          <div class="description">
+            <p>Core i9-14900KS has 36 MB of L3 cache and operates at 3.2 GHz by default, but can boost up to 6.2 GHz, depending on the workload.</p>
+          </div>
+        </div>        
+        <div class="productItem motherboard">
+          <img src="./images/asusRogStrixZ790-F.png" alt="ASUS ROG Strix Z790-F">
+          <div class="productName">ASUS ROG Strix Z790-F</div>
+          <div class="productPrice">$330.00</div>
+          <div class="description">
+            <p>The ROG Strix Z790-F II strikes from the shadows with a flurry of advanced power and features to elevate the latest Intel® processors, graphics cards, storage and wireless networking to the next level.</p>
+          </div>
+        </div>        
+        <div class="productItem gpu">
+          <img src="./images/gigabyteRX-7900XTX.png" alt="Gigabyte RX 7900 XTX">
+          <div class="productName">Gigabyte RX 7900 XTX</div>
+          <div class="productPrice">$1200.00</div>
+          <div class="description">
+            <p>Featuring advanced AMD RDNA™ 3 compute units, blazing fast clock speeds, and chiplet technology to enable fluid, high-refresh rate gaming experiences.</p>
+          </div>
+        </div>        
+        <div class="productItem ram">
+          <img src="./images/deltaT-Force.jpg" alt="T-Force Delta DDR5 (2x16GB)">
+          <div class="productName">T-Force Delta DDR5 (2x16GB)</div>
+          <div class="productPrice">$130.00</div>
+          <div class="description">
+            <p>Modeled after a stealth aircraft, the T-FORCE DELTA RGB DDR5 delivers a refreshing visual experience.</p>
+          </div>
+        </div>        
+        <div class="productItem ssd">
+          <img src="./images/p3CrucialM.2.jpg" alt="Crucial P3 500GB NVME M.2 SSD">
+          <div class="productName">Crucial P3 500GB NVME M.2 SSD</div>
+          <div class="productPrice">$70.00</div>
+          <div class="description">
+            <p>Built with high-quality Micron® Advanced 3D NAND, tested and validated to the exacting standards you've come to expect from one of the world's largest manufacturers of flash memory.</p>
+          </div>
+        </div>        
+        <div class="productItem psu">
+          <img src="./images/evgaSuperNova.png" alt="EVGA SuperNOVA 850W">
+        <div class="productName">EVGA SuperNOVA 850W</div>
+        <div class="productPrice">$260.00</div>
+        <div class="description">
+          <p>Featuring 80 PLUS Gold certified efficiency, fully-modular cables, and 100% Japanese capacitors, the 850 GM casts a long shadow over its competition.</p>
+        </div>
+      </div>
+      <div class="productItem case">
+        <img src="./images/dynamicMiniO11.jpg" alt="O11 Dynamic MINI">
+        <div class="productName">O11 Dynamic MINI</div>
+        <div class="productPrice">$110.00</div>     
+        <div class="description">
+          <p>Along with a steel frame, the O11 Dynamic Mini sports an aluminum exterior and tempered glass side panel for showing off internals.</p>
+        </div> 
+      </div>      
+      <div class="productItem mouse">
+        <img src="./images/lamzuAtlantisMini.png" alt="Lamzu Atlantis Mini">
+        <div class="productName">Lamzu Atlantis Mini</div>
+        <div class="productPrice">$130.00</div>  
+        <div class="description">
+          <p>Featuring an hourglass symmetry, the Lamzu Atlantis Mini Pro provides a comfortable experience for players.</p>
+        </div>          
+      </div>      
+      <div class="productItem monitor">
+        <img src="./images/vg27bqTufGaming.png" alt="TUF Gaming VG27BQ">
+        <div class="productName">TUF Gaming VG27BQ</div>
+        <div class="productPrice">$400.00</div>
+        <div class="description">
+          <p>TUF Gaming VG27BQ is a 27-inch, QHD (2560x1440), HDR display with an ultrafast 165*Hz (overclocking) and 0.4ms* response time.</p>
+        </div>         
+      </div>      
+      <div class="productItem mouse">
+        <img src="./images/ninjutsoSoraV2.png" alt="Ninjutso Sora v2">
+        <div class="productName">Ninjutso Sora v2</div>
+        <div class="productPrice">$130.00</div>      
+        <div class="description">
+          <p>The Ninjutso Sora V2 is a lightweight wireless gaming mouse and the successor to the Ninjutso Sora.</p>
+        </div>      
+      </div>      
+      <div class="productItem mousepad">
+        <img src="./images/steelseriesQck+.jpg" alt="Steelseries QcK+">
+        <div class="productName">Steelseries Qck+</div>
+        <div class="productPrice">$20.00</div>    
+        <div class="description">
+          <p>The cloth surface of the QcK+ mouse pad was designed to offer a smooth, consistent glide.</p>
+        </div>        
+      </div>      
+      <div class="productItem headset">
+        <img src="./images/logitechGProXWireless.png" alt="Logitech G Pro X Wireless">
+        <div class="productName">Logitech G Pro X Wireless</div>
+        <div class="productPrice">$150.00</div>    
+        <div class="description">
+          <p>The Logitech G Pro X Wireless is a high-performance wireless gaming headset designed for professional gamers and enthusiasts. </p>
+        </div>        
+      </div>      
+      <div class="productItem mousepad">
+        <img src="./images/zowieG-SR-SE.png" alt="BenQ Zowie G-SR-SE Gris">
+        <div class="productName">BenQ Zowie G-SR-SE Gris</div>
+        <div class="productPrice">$52.00</div>    
+        <div class="description">
+          <p>The G-SR-SE offers a balance between control and speed, with a cloth surface that provides a smooth and consistent glide for precise mouse movements.</p>
+        </div>        
+      </div>      
+      <div class="productItem headset">
+        <img src="./images/steelseriesArctisProWireless.jpg" alt="Steelseries Arctis Pro Wireless">
+        <div class="productName">Steelseries Arctis Pro Wireless</div>
+        <div class="productPrice">$400.00</div>    
+        <div class="description">
+          <p>It features dual wireless technology, combining lossless 2.4GHz wireless for ultra-low-latency gaming.</p>
+        </div>        
+      </div>      
+      <div class="productItem headset">
+        <img src="./images/hyperxCloudWireless.png" alt="HyperX Cloud II Wireless">
+        <div class="productName">HyperX Cloud II Wireless</div>
+        <div class="productPrice">$190.00</div>   
+        <div class="description">
+          <p>The HyperX Cloud II was built to be an ultra-comfortable gaming headset with great sound.</p>
+        </div>         
+      </div>      
+    </div>
+    </div>
+  </div>
+  
+  <!-- FAQ Section -->
+  <div id="faq" class="section">
+    <h1>FAQ Section</h1>
+    <div class="faqItem">
+      <h3>What is the return policy?</h3>
+      <div class="answer" style="display: none;">We offer a 30-day return policy.</div>
+    </div>
+    <div class="faqItem">
+      <h3>Do you offer international shipping?</h3>
+      <div class="answer" style="display: none;">Yes, we ship internationally.</div>
+    </div>
+    <div class="faqItem">
+      <h3>What payment methods do you accept?</h3>
+      <div class="answer" style="display: none;">We accept major credit cards, PayPal, and bank transfers.</div>
+    </div>
+    <div class="faqItem">
+      <h3>What should I do if a product is out of stock?</h3>
+      <div class="answer" style="display: none;">You can sign up for restock notifications or place a pre-order to secure the product when it becomes available.</div>
+    </div>
+    <div class="faqItem">
+        <h3>How can I track my order?</h3>
+        <div class="answer" style="display: none;">Once your order has shipped, you will receive a tracking number via email to monitor its status.</div>
+    </div>
+    <div class="faqItem">
+        <h3>Do you offer warranties on your products?</h3>
+        <div class="answer" style="display: none;">Yes, most products come with a manufacturer's warranty. Please check the product description for details.</div>
+    </div>
+    <div class="faqItem">
+        <h3>Can I modify or cancel my order?</h3>
+        <div class="answer" style="display: none;">You can modify or cancel your order within 24 hours of placing it. Please contact our support team for assistance.</div>
+    </div>
+    <div class="faqItem">
+        <h3>What should I do if I receive a damaged item?</h3>
+        <div class="answer" style="display: none;">If you receive a damaged item, please contact our customer service team within 7 days for a replacement or refund.</div>
+    </div>
+    <div class="faqItem">
+        <h3>Do you provide technical support for your products?</h3>
+        <div class="answer" style="display: none;">Yes, we offer technical support for all products. You can reach our support team via email or through our support page.</div>
+    </div>
+    <div class="faqItem">
+        <h3>How do I contact customer service?</h3>
+        <div class="answer" style="display: none;">You can reach our customer service team via email at support@digitalden.ca or call us at (123) 456-7890.</div>
+    </div>
+  </div>
+
+  <!-- Link to JavaScript file -->
+  <script src="app.js"></script> 
+</body>
+</html>

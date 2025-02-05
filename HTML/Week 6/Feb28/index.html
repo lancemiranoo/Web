@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <title>February 28th Examples</title>
+    </head>
+
+    <body class="p-2">
+        <header>
+            <nav class="navbar navbar-expand navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active">Link text</a></li>
+                        <li class="nav-item"><a class="nav-link">Link text</a></li>
+                        <li class="nav-item"><a class="nav-link">Link text</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <h1>Sample Heading <span class="badge rounded-pill bg-success">Badge</span></h1>
+        <p>Sample text <span class="badge" style="background-color: red;">Badge</span></p>
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-outline-primary">Submit</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card">
+                        <heading class="card-header">
+                            <h2>Card Header</h2>
+                        </heading>
+                        <div class="card-body">
+                            <h2 class="card-title">Card title</h2>
+                            <p class="card-text">Filler text</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Item 1</li>
+                            <li class="list-group-item">Item 2</li>
+                            <li class="list-group-item">Item 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="carousel slide" id="myCarousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./maxwell3.jpg" class="d-block w-100" />
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="./maxwell4.jpg" class="d-block w-100" />
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="card">
+                                    <heading class="card-header">
+                                        <h2>Card Header</h2>
+                                    </heading>
+                                    <div class="card-body">
+                                        <h2 class="card-title">Card title</h2>
+                                        <p class="card-text">Filler text</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Item 1</li>
+                                        <li class="list-group-item">Item 2</li>
+                                        <li class="list-group-item">Item 3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden" aria-hidden="true">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden" aria-hidden="true">Previous</span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script>
+            const myCarouselElement = document.querySelector('#myCarousel');
+            const carousel = new bootstrap.Carousel(myCarouselElement, {});
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effects and Animations</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        .faq-item, .image-gallery img {
+            margin:10px;
+            cursor:pointer;
+        }
+        #menu {
+            width: 200px;
+            background-color: #3498db;
+            padding: 10px;
+            color: white;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Effects and Animations Practice</h1>
+    <div id="faq">
+        <h2>FAQ Section</h2>
+        <div class="faq-item">
+            <h3>What is jQuery?</h3>
+            <div class="answer" style="display:none;">
+                jQuery is a fast, small, and feature-rich Javascript library.
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>How does jQuery work?</h3>
+            <div class="answer" style="display:none;">
+                It simplifies HTML document traversal, event handling, and animation.
+            </div>
+        </div>
+    </div>
+    <div id="imageGallery">
+        <h2>Image Gallery</h2>
+        <button id="toggleGallery">Toggle Gallery</button>
+        <div class="image-gallery">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfz6iX2PEd1MHAohD3mkc_LsWqLH5MTyQJkCYopzcm8kItLrWk" style="height: 100px; width: 100px;" alt="Image 1">
+            <img src="https://imageio.forbes.com/specials-images/imageserve/66021f46de97962ddaedaaeb/Invest-Fest-2023/0x0.jpg?crop=2629,1752,x0,y8,safe&height=473&width=711&fit=bounds" style="height: 100px; width: 100px; display: none;" alt="Image 2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg/1200px-Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg" style="height: 100px; width: 100px;" alt="Image 3">
+        </div>
+    </div>
+    <div id="menu">
+        <h3>Menu</h3>
+        <button id="expandMenu">expandMenu</button>
+        <div class="menu-content" style="display: none;">
+            <p>Home</p>
+            <p>About</p>
+            <p>Contact</p>
+        </div>
+    </div>
+
+</body>
+</html>

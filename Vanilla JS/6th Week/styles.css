@@ -1,0 +1,238 @@
+/**********************
+*   General Styling   *
+**********************/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+/******************************
+*   Navigation Menu Styling   *
+******************************/
+#navigationMenu {
+  width: 12%; /* Reduced width for a slimmer menu */
+  min-width: 180px; /* Ensures it looks good on smaller screens */
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333; /* Dark background */
+  color: white; /* Text color */
+  padding-top: 3rem; /* Reduced padding for a compact look */
+  padding-left: 1.5rem;
+  z-index: 1; /* Keeps it on top */
+  border-right: 1px solid #444; /* Subtle border */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+#expandMenu {
+    background-color: #0056b3; /* Professional blue */
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.menuContent a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* Larger, easier-to-read text */
+  padding: 15px 10px;
+  display: block;
+  border-radius: 5px;
+}
+
+.menuContent p a:hover {
+  color: #f0a500;
+}
+
+/***************************
+*   Home Section Styling   *
+***************************/
+#home {
+  /* Full viewport height */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin-left: 240px;
+}
+
+.bannerImage {
+  position: absolute;
+  top: -50px;
+  left: 12%;
+  width: 100%;
+  height: auto;
+  /* Ensure the image is behind other content */
+  z-index: -1;
+}
+
+.bannerHead {
+  color: #f0ff67;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 1); /* Add shadow effect */
+  font-size: 5rem; /* Larger heading */
+  margin-bottom: 20px; /* Spacing between heading and paragraph */
+  font-weight: 700;
+  letter-spacing: 2px; /* Add letter spacing for a modern look */
+}
+
+.bannerText {
+  color: white;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9); /* Add shadow effect */
+  font-size: 1.5rem; /* Larger font for readability */
+}
+
+.shopDescription {
+  /* White background for content block */
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #0056b3;
+}
+
+/**************************************
+*   Product Gallery Section Styling   *
+**************************************/
+#products {
+  background-color: #f9f9f9;
+  padding-top: 20px;
+}
+
+#products h1 {
+  color: #f0ff67;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+#filterOptions {
+  position: sticky;
+  top: 20px;
+  width: 200px;
+  background-color: #f8f9fa; /* Light background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#filterOptions h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.filterBtn {
+  width: 100%;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+}
+
+.filterBtn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.productList {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.productItem {
+  position: relative;
+  height: 350px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.productItem img {
+  width: 100%;  /* Make images fill the product item */
+  height: 250px; /* Adjust height to fit nicely */
+  object-fit: cover; /* Ensure the image scales properly */
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.productName {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0; /* Spacing around description */
+}
+
+.productPrice {
+  font-size: 18px;
+  color: #28a745;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.description {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+/**************************
+*   FAQ Section Styling   *
+**************************/
+#faq {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin-left: 240px;
+}
+
+#faq h1 {
+  color: #f0ff67;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.faqItem {
+  cursor:pointer;
+  padding-bottom: 25px;
+}

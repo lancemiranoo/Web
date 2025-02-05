@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <title>Logical Operators | KR</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="" />
+
+        <style>
+            body {
+                font-family: Calibri;
+                width: 80%;
+                max-width: 900px;
+                border: 1px solid black;
+                margin: 2rem auto;
+                padding: 0.5rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Logical Operators</h1>
+
+        <hr />
+
+        <p>In JavaScript, there are four fundamental logical operators that allow developers to manipulate and control the
+            flow of their programs: && (logical AND), || (logical OR), ! (logical NOT), and ?? (nullish coalescing). The
+            logical AND (&&) operator evaluates to true if both of its operands are true. The logical OR (||) operator
+            evaluates to true if at least one of its operands is true. The logical NOT (!) operator negates the truthiness of
+            an expression, turning true into false and vice versa. The nullish coalescing (??) operator is used to provide a
+            default value when dealing with potentially null or undefined variables.</p>
+
+        <script>
+            // Put your code here!
+            let x = prompt("First Value");
+            let y = prompt("Second Value");
+            let result = x + ' and ' + y + ' is ' + (x && y) 
+            + '\n' + x + ' or ' + y + ' is ' + (x || y)
+            + '\n' + 'not ' + x +  ' is ' + (!x) 
+            + '\n' + 'not ' + y + ' is ' + (!y)
+            + '\n' + x + ' null ' + y + ' is ' + (x ?? y)
+            alert(result);
+        </script>
+    </body>
+
+</html>

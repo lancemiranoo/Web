@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <title>Logical Operators | KR</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="" />
+
+        <style>
+            body {
+                font-family: Calibri;
+                width: 80%;
+                max-width: 900px;
+                border: 1px solid black;
+                margin: 2rem auto;
+                padding: 0.5rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Logical Operators</h1>
+
+        <hr />
+
+        <p>In JavaScript, there are four fundamental logical operators that allow developers to manipulate and control the
+            flow of their programs: && (logical AND), || (logical OR), ! (logical NOT), and ?? (nullish coalescing). The
+            logical AND (&&) operator evaluates to true if both of its operands are true. The logical OR (||) operator
+            evaluates to true if at least one of its operands is true. The logical NOT (!) operator negates the truthiness of
+            an expression, turning true into false and vice versa. The nullish coalescing (??) operator is used to provide a
+            default value when dealing with potentially null or undefined variables.</p>
+
+        <script>
+            // Put your code here!
+            let blueSpruce = {
+                height: 23,
+                type: "coniferous",
+                colours: {
+                    needles: "green",
+                    trunkBark: "grey",
+                    branchBark: "brown",
+                }
+                
+            }
+            let blueSpruce2 = Object.assign({}, blueSpruce);
+            blueSpruce2.colours.needles = "black";
+
+            console.log(blueSpruce.colours.needles);
+            console.log(blueSpruce2.colours.needles)
+
+            let blueSpruce3 = structuredClone(blueSpruce);
+            blueSpruce2.colours.needles = "red";
+
+            console.log(blueSpruce3.colours.needles);
+            console.log(blueSpruce.colours.needles);
+
+
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Plugins and UI Example</title>
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+</head>
+<body>
+    <h1>jQuery Plugins and UI Demo</h1>
+
+    <!-- Datepicker Input -->
+     <p>Select a date: <input type="tex" id="datepicker"></p>
+
+    <!-- Accordion -->
+    <div id="myAccordion">
+        <h3>Section</h3>
+        <div>
+            <p>Content for section 1.</p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+            <p>Content for section 2.</p>
+        </div>
+    </div>
+
+    <!-- jQuery code will go here -->
+</body>
+<script>
+    $(document).ready(function(){
+        // Activate the datepicker
+        $("#datepicker").datepicker();
+
+        // Activate the accordion 
+        $("#myAccordion").accordion();
+
+        // CUstom plugin to change text color
+        $.fn.changeColor = function(color) {
+            this.css('color', color);   // Change the color of the selected element
+            return this;                // Allow chaining other jQuery methods
+        };
+
+        // Use the custom plugin to change the color of the h1 element
+        $("h1").changeColor("blue");
+    });
+</script>
+</html>

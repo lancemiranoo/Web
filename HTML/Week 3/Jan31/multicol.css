@@ -1,0 +1,9 @@
+body {
+    column-gap: 10px;
+    column-rule: 5px dotted red;
+    column-width: 250px;
+}
+
+h2 {
+    column-span: all;
+}

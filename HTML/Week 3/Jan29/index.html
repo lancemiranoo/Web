@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        section>h1 {
+            background: blue;
+        }
+
+        article+p {
+            background: red
+        }
+
+        h3 {
+            display: none;
+            background: yellow;
+            width: fit-content;
+        }
+
+        section:hover h3 {
+            display: block;
+        }
+
+        h1::selection {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Heading</h1>
+        <h1>Heading again</h1>
+        <p>Paragraph</p>
+        <div>
+            <h1>Heading again again</h1>
+        </div>
+    </section>
+    <article>
+        <h1>Other heading</h1>
+    </article>
+    <p>After &lt;/article&gt;</p>
+    <p>Another paragraph</p>
+    <div>
+        <p>Another P</p>
+    </div>
+
+    <section>
+        <h1>Section heading</h1>
+        <h3>Hidden Section</h3>
+    </section>
+    <p>Test</p>
+</body>
+
+</html>

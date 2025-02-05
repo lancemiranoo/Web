@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+ <message>
+ <author>John Doe</author>
+ <text>Hello, welcome to AJAX and XML!</text>
+ </message>
+ <message>
+ <author>Jane Smith</author>
+ <text>This is a sample message loaded with AJAX.</text>
+ </message>
+</messages>

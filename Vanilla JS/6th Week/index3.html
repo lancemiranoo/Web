@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive To-Do List</title>
+    <!-- jQuery and jQuery UI CSS -->
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    .task-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .task-list li {
+        padding: 8px;
+        background-color: #f0f0f0;
+        margin-bottom: 5px;
+        cursor: move;
+    }
+
+    .completed {
+        text-decoration: line-through;
+        color: gray;
+    }
+</style>
+</head>
+<body>
+    <h1>Interactive To-Do List</h1>
+
+    <form id="task-form">
+        <input type="text" id="task-input" placeholder="Enter task">
+        <input type="text" id="date-input" placeholder="Due Date"> 
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div id="task-accordion">
+        <h3>Work</h3>
+        <ul id="work-list" class="task-list"></ul>
+        <h3>Personal</h3>
+        <ul id="personal-list" class="task-list"></ul>
+        <h3>Travel</h3>
+        <ul id="travel-list" class="task-list"></ul>
+    </div>
+</body>
+    <!-- jQuery and jQuery UI Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+    <script src="./script3.js"></script>
+
+</html>

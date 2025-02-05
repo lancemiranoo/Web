@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <title>Logical Operators | KR</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="" />
+
+        <style>
+            body {
+                font-family: Calibri;
+                width: 80%;
+                max-width: 900px;
+                border: 1px solid black;
+                margin: 2rem auto;
+                padding: 0.5rem;
+            }
+
+            div {
+                display: flex;
+                justify-content: center;
+            }
+
+            button {
+                margin: auto;
+                text-align: center;
+                font-size: xx-large;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Logical Operators</h1>
+
+        <hr />
+
+        <p>In JavaScript, there are four fundamental logical operators that allow developers to manipulate and control the
+            flow of their programs: && (logical AND), || (logical OR), ! (logical NOT), and ?? (nullish coalescing). The
+            logical AND (&&) operator evaluates to true if both of its operands are true. The logical OR (||) operator
+            evaluates to true if at least one of its operands is true. The logical NOT (!) operator negates the truthiness of
+            an expression, turning true into false and vice versa. The nullish coalescing (??) operator is used to provide a
+            default value when dealing with potentially null or undefined variables.</p>
+        <div>
+            <button onclick="calculator.read()">Calculator</button>
+        </div>
+
+        <script>
+            let calculator = {
+                a: null,
+                b: null,
+                eq: null,
+                read() {
+                    this.a = +prompt("a:", "null"); // Unary + converts to Number type
+                    this.b = +prompt("b:", "null");
+                    this.eq = prompt("+"+" "+"-"+" "+"x"+" "+"/"+" "+"*");
+                    this.calculate();
+                },
+
+                add() {
+                    return this.a + this.b;
+                },
+
+                sub() {
+                    return this.a - this.b;
+                },
+
+                mul() {
+                    return this.a * this.b;
+                },
+
+                div() {
+                    return this.a / this.b;
+                },
+
+                exponent() {
+                    return this.a ** this.b;
+                },
+                calculate() {
+                    
+
+                    switch (this.eq) {
+                        case "+":
+                            alert(calculator.add());
+                            break;
+                        case "-":
+                            alert(calculator.sub());
+                            break;
+                        case "x":
+                            alert(calculator.mul());
+                            break;
+                        case "/":
+                            alert(calculator.div());
+                            break;
+                        case "*":
+                            alert(calculator.exponent());
+                            break;
+                        default:
+                            console.log("Please select what operation will you use?");
+                            break;
+                    }
+                }
+
+
+            };
+
+            calculator.read();
+
+
+        </script>
+    </body>
+
+</html>

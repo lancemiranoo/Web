@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.list {
+    width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+#contact-dialog {
+    display: none;
+}
+
+#add-contact{
+    background-color: aqua;
+}

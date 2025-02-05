@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form</title>
+    <style>
+        .highlight {
+            border: 2px solid blue; /*Highlight style for focused inputs*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dynamic Form</h1>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="textbox" required>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" class="textbox" required>
+        <br>
+        <label for="gender">Gender:</label>
+        <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <br>
+        <label for="hobbies">Hobbies:</label>
+        <input type="checkbox" id="hobby1" value="Reading"> Reading
+        <input type="checkbox" id="hobby2" value="Traveling"> Traveling
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    <div id="output"></div> <!-- This will show the submitted data -->
+    <script src="index.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>

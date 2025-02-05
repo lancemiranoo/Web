@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Lance Mirano - Feb. 07 Participation</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-template-areas:
+            "one  one  two ."
+            "one  one  two three"
+            "four four five five"
+            "six . five five";
+        grid-auto-rows: 200px;
+        gap: 20px;
+
+    }
+
+    #One {
+        grid-area: one;
+        border: 5px solid lightcyan
+    }
+
+    #Two {
+        grid-area: two;
+        border: 5px solid orange
+    }
+
+    #Three {
+        grid-area: three;
+        border: 5px solid darkgoldenrod;
+    }
+
+    #Four {
+        grid-area: four;
+        border: 5px solid orange;
+    }
+
+    #Five {
+        grid-area: five;
+        border: 5px solid palegreen;
+    }
+
+    #Six {
+        grid-area: six;
+        border: 5px solid darkmagenta
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="One">One</div>
+        <div id="Two">Two</div>
+        <div id="Three">Three</div>
+        <div id="Four">Four</div>
+        <div id="Five">Five</div>
+        <div id="Six">Six</div>
+    </div>
+</body>
+
+
+
+</html>

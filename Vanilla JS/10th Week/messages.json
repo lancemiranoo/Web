@@ -1,0 +1,12 @@
+{
+    "messages": [
+        {
+            "author": "John Doe",
+            "text": "Hello, Welcome to AJAX and JSON!"
+        },
+        {
+            "author": "Jane Smith",
+            "text": "This is a sample message loaded with AJAX and JSON."
+        }
+    ]
+}

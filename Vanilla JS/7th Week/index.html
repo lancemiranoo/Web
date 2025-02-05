@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Dashboard</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.0/jquery-ui.min.js"></script> <!-- script for theme -->
+</head>
+<body>
+    <div id="task-dashboard">
+        <button id="add-task-btn">Add New Task</button>
+        <div id="task-list"></div>
+    </div>
+
+    <!-- Task Dialog for Adding New Task -->
+     <div id="add-task-dialog" title="Add New Task" style="display: none;">
+        <form id="task-form">
+            <label for="task-name">Task Name:</label>
+            <input type="text" id="task-name" required><br><br>
+
+            <label for="task-date">Due Date:</label>
+            <input type="text" id="task-date" required><br><br>
+
+            <label for="task-priority">Priority:</label>
+            <div id="task-priority"></div><br><br>
+        </form>
+     </div>
+
+     <div id="completed-tasks">
+        <h3>Completed Task</h3>
+     </div>
+
+     <!-- jQuery Library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <!-- jQuery UI -->
+       <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+       <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+       <script src="script.js"></script>
+</body>
+</html>

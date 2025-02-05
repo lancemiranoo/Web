@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registation Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Registation Form</h1>
+
+<form id="registationForm">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+    <span class="error" id="usernameError"></span>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+    <span class="error" id="emailError"></span>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    <span class="error" id="passwordError"></span>
+    <span id="passwordStrength"></span>
+    
+    <button type="submit">Register</button>
+    <button type="button" id="resetButton">Reset Form</button>
+
+    <script src="script.js"></script>
+</form>
+    
+</body>
+</html>

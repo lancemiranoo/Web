@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <!-- Internal CSS -->
+    <style>
+        td,
+        th {
+            border: 1px solid #000;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thread>
+            <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Row 1</th>
+                    <td colspan="2" rowspan="2">Cell 1</td>
+
+                    <!--<td>Cell 2</td>-->
+                </tr>
+                <tr>
+                    <th>Row 2</th>
+                    <!--<td colspan="2">Cell 1<td>-->
+
+                </tr>
+            </tbody>
+            <tfoot>
+                </tr>
+                <th>Foot 1</th>
+                <td colspan="2">Foot 2</td>
+
+
+                </tr>
+            </tfoot>
+    </table>
+</body>
+
+</html>
