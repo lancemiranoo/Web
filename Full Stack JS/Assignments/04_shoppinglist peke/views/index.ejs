@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shopping List</h1>
+        <form action="/add-item" method="POST">
+            <label for="item">Item:</label>
+            <input type="text" name="item" placeholder="Add a new item" required>
+            <button type="submit" name="action" value="wishlist">Add to Wish List</button>
+            <button type="submit" name="action" value="purchased">Add to Purchased List</button>
+        </form>
+
+        <h2>Wish List:</h2>
+        <ul>
+            <% wishList.forEach((item, index) => { %>
+                <li>
+                    <input type="checkbox" 
+                           id="wish-<%= index %>" 
+                           onchange="transferItem(<%= index %>, 'wishlist')" 
+                           <%= '' %> 
+                    >
+                    <div class="shopitem"><%= item %></div>
+                    <!-- Delete button for Wish List inside the list item -->
+                    <form action="/delete-item" method="POST" style="display: inline;">
+                        <input type="hidden" name="index" value="<%= index %>"> <!-- Correctly pass the index -->
+                        <button type="submit" style="color: red;">&#10006;</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+
+        <h2>Purchased List:</h2>
+        <ul>
+            <% purchasedList.forEach((item, index) => { %>
+                <li>
+                    <!-- Checkbox should be checked if item is in purchased list -->
+                    <input type="checkbox" 
+                           id="purchased-<%= index + wishList.length %>" 
+                           onchange="transferItem(<%= index + wishList.length %>, 'purchased')" 
+                           checked 
+                    >
+                    <div class="shopitem"><%= item %></div>
+                    <!-- Delete button for Purchased List inside the list item -->
+                    <form action="/delete-item" method="POST" style="display: inline;">
+                        <input type="hidden" name="index" value="<%= index + wishList.length %>"> <!-- Adjust for correct index -->
+                        <button type="submit" style="color: red;">&#10006;</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+    <script>
+        function transferItem(index, list) {
+            // Send an AJAX request to the server to transfer the item
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/transfer-item', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // On success, reload the page to update the lists
+                    location.reload();
+                }
+            };
+            // Send the index and list (either 'wishlist' or 'purchased') to the server
+            xhr.send('index=' + index + '&list=' + list);
+        }
+    </script>
+</body>
+</html>
