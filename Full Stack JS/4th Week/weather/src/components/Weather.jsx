@@ -1,7 +1,7 @@
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import { getWeatherData } from "../services/api";
 
-function weather() {
+function Weather() {
     //  State variables for city input, weather data, and loading status
     const [city, setCity] = useState(null);
     const [weather, setWeather] = useState(null);
